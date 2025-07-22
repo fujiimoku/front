@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清华大学网络登录</title>
+    <link rel="stylesheet" href="static/css/custom.css">
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+            <div class="logo">
+                <img src="static/images/tsinghua/title.png" alt="清华大学">
+            </div>
+            <div class="change-lang">
+                <span>Language</span>
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="status-card">
+                <!-- 欢迎区域 -->
+                <div class="status-card__greeting"></div>
+                <div class="status-card__greeting-triangle"></div>
+
+                <!-- 主要信息面板 -->
+                <div class="status-card__panel">
+                    <div class="panel__user-info">
+                        <div class="user-info__name">czf23</div>
+                        <div class="user-info__settings">
+                            <a href="#">自服务</a>
+                            <p>Account Settings</p>
+                        </div>
+                    </div>
+
+                    <div class="panel__info-row">
+                        <div class="info-row__label">
+                            <p>已连接</p>
+                            <p class="sub-label">Duration</p>
+                        </div>
+                        <div class="info-row__value">
+                            <span class="online_time">17:12:12</span>
+                        </div>
+                    </div>
+
+                    <div class="panel__info-row">
+                        <div class="info-row__label">
+                            <p>已用流量</p>
+                            <p class="sub-label">Usage</p>
+                        </div>
+                        <div class="info-row__value">
+                            <div class="usage-progress">
+                                <div class="usage-progress__track">
+                                    <!-- 分段背景 -->
+                                    <div class="usage-progress__segment usage-progress__segment--0-20"></div>
+                                    <div class="usage-progress__segment usage-progress__segment--20-30"></div>
+                                    <div class="usage-progress__segment usage-progress__segment--30-40"></div>
+                                    <div class="usage-progress__segment usage-progress__segment--40-50"></div>
+
+                                    <!-- 刻度线 -->
+                                    <div class="usage-progress__tick usage-progress__tick--20">20</div>
+                                    <div class="usage-progress__tick usage-progress__tick--30">30</div>
+                                    <div class="usage-progress__tick usage-progress__tick--40">40</div>
+                                    <div class="usage-progress__tick usage-progress__tick--50">50</div>
+
+                                    <!-- 实际进度条 -->
+                                    <div class="usage-progress__bar" data-value="15">
+                                        <div class="usage-progress__text">15GB</div>
+                                    </div>
+                                    <div class="usage-progress__overflow">
+                                        <div class="usage-progress__overflow-bar usage-progress__overflow-bar--1"></div>
+                                        <div class="usage-progress__overflow-bar usage-progress__overflow-bar--2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 装饰元素 -->
+                <div class="status-card__corner-decoration"></div>
+
+                <!-- 操作区域 -->
+                <div class="status-card__logout-box">
+                    <button class="logout-box__button"></button>
+                </div>
+
+
+                <!-- 快捷链接 -->
+                <ul class="status-card__quick-links">
+                    <li class="quick-links__item">
+                        <a href="#" class="quick-links__link quick-links__link--info"><span>Info</span></a>
+                    </li>
+                    <li class="quick-links__item">
+                        <a href="#" class="quick-links__link quick-links__link--lib"><span>Lib</span></a>
+                    </li>
+                    <li class="quick-links__item">
+                        <a href="#" class="quick-links__link quick-links__link--learn"><span>Learn</span></a>
+                    </li>
+                    <li class="quick-links__item">
+                        <a href="#" class="quick-links__link quick-links__link--mail"><span>Mail</span></a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>版权信息</p>
+        </footer>
+    </div>
+</body>
+
+</html>

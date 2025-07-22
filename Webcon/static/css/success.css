@@ -1,0 +1,188 @@
+body {
+    background: #E6E6E6 url(../images/tsinghua/popup_bg.png) no-repeat top right;
+}
+
+#app .header {
+    display: none;
+}
+
+#app .section {
+    width: 640px;
+    height: 480px;
+    background: url(../images/tsinghua/popup_shadow.png) no-repeat 48px 344px;
+}
+
+#app .section .greet {
+    position: absolute;
+    top: 64px;
+    left: 48px;
+    width: 512px;
+    height: 224px;
+    background: #93278F url(../images/tsinghua/popup_greeting.png) no-repeat 30px 46px;
+}
+
+#app .section .triangle_greet {
+    left: 80px;
+    top: 288px;
+}
+
+#app .section .login-box {
+    top: 96px;
+    left: -100px;
+    padding: 32px;
+    width: 416px;
+    height: 272px;
+}
+
+#app .section .login-box .user_name {
+    float: left;
+    color: #93278F;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 34px;
+    font-weight: lighter;
+}
+
+#app .section .login-box .account-setting {
+    float: left;
+    margin: 8px 0 0 16px;
+    line-height: 1.1;
+    font-size: 13px;
+    padding-left: 40px;
+    background: url(../images/tsinghua/account.gif) no-repeat 0 0;
+    text-align: left;
+    color: #763880;
+}
+
+#app .section .login-box .account-setting a {
+    color: #763880;
+}
+
+#app .section .login-box .account-setting p {
+    font-size: 11px;
+}
+
+#app .section .login-box .info-content .label_text {
+    clear: left;
+    float: left;
+    width: 56px;
+    height: 32px;
+    margin-top: 22px;
+    text-align: right;
+    font-size: 13px;
+}
+
+#app .section .login-box .info-content .label_text p {
+    font-size: 13px;
+    color: #303030;
+}
+
+#app .section .login-box .info-content .content_text {
+    float: left;
+    margin: 24px 0 0 20px;
+    padding-top: 4px;
+    height: 28px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: lighter;
+}
+
+#app .section .login-box .info-content .content_text .online_time {
+    color: #ec6677;
+    font-size: 28px;
+}
+
+#app .section .login-box .info-content .content_text .sum_bytes {
+    color: #5C5C5C;
+    font-size: 28px;
+}
+
+#app .section .corner {
+    position: absolute;
+    top: 288px;
+    left: 592px;
+    border-color: transparent #CCCCCC;
+    border-width: 16px 0 0 16px;
+    border-style: solid;
+}
+
+#app .section .btn-box {
+    position: absolute;
+    top: 304px;
+    right: 32px;
+    width: 208px;
+    height: 80px;
+    background: #FFFFFF;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#app .section .btn-box .btn-logout {
+    margin: 16px;
+    width: 174px;
+    height: 46px;
+    border: #B2AABE solid 1px;
+    border-radius: 0;
+    background: #C0BDCC url(../images/tsinghua/disconnect.png) no-repeat center 0;
+}
+
+#app .section .warning {
+    display: none;
+    position: absolute;
+    left: 48px;
+    bottom: 32px;
+    width: 320px;
+    text-indent: -14px;
+    font-size: 12px;
+    color: #666;
+    text-align: left;
+}
+
+#app .section .warning span {
+    padding-right: 4px;
+    font-size: 14px;
+    font-family: Verdana, Geneva, sans-serif;
+    color: #999999;
+}
+
+#app .section .warning a {
+    font-size: 12px;
+    color: #763880;
+}
+
+#app .section .link {
+    position: absolute;
+    bottom: 32px;
+    right: 32px;
+    width: 243px;
+}
+
+#app .section .link li {
+    float: left;
+    margin-right: 12px;
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+#app .section .link li a {
+    font-size: 11px;
+    color: #763880;
+    height: 16px;
+    padding: 18px 0 0 26px;
+}
+
+#app .section .link #link_info {
+    background: url(../images/tsinghua/popup_info.gif) no-repeat 2px 2px;
+}
+
+#app .section .link #link_lib {
+    background: url(../images/tsinghua/popup_lib.gif) no-repeat 2px 2px;
+}
+
+#app .section .link #link_learn {
+    background: url(../images/tsinghua/popup_learn.gif) no-repeat 2px 2px;
+}
+
+#app .section .link #link_mail {
+    background: url(../images/tsinghua/popup_mail.gif) no-repeat 2px 2px;
+}
+
+#app .footer {
+    display: none;
+}

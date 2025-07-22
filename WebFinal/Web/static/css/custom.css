@@ -1,0 +1,424 @@
+/* ==================================================
+   1. 全局变量与基础样式 (Global Variables & Base Styles)
+   ================================================== */
+:root {
+    --color-primary: #93278F;
+    --color-primary-light: #992995;
+    --color-accent: #C0CE55;
+    --color-accent-border: #9CB22E;
+    --color-background: #DADBDC;
+    --color-panel-bg: #F2F2F2;
+    --color-text-dark: #303030;
+    --color-text-light: #6E6F6F;
+    --color-text-link: #93278f;
+    --color-border-input: #E6E6E6;
+    --color-widget-bg: #808080;
+    --font-main: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+    --font-alt: Verdana, Geneva, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--color-background) url(../images/background/background.png) repeat-x top;
+}
+
+/* ==================================================
+   2. 页眉布局 (Header Layout)
+   ================================================== */
+#app .header {
+    width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#app .header .logo {
+    position: relative;
+    width: 283px;
+    height: 100px;
+    background: url(../images/logo/logo.gif) no-repeat;
+}
+
+#app .header .logo .logo-img {
+    width: 100%;
+    height: 100%;
+    background: url(../images/tsinghua/title.png) no-repeat;
+    background-position: 0 19px;
+    position: relative;
+    left: 50px;
+}
+
+#app .header .qr {
+    text-align: center;
+}
+
+#app .header .qr .qr-img {
+    width: 100px;
+    height: 100px;
+    background: url(../images/tsinghua/qr.jpg) no-repeat center center;
+    background-size: cover;
+    margin-bottom: 8px;
+}
+
+#app .header .qr p {
+    font-size: 12px;
+    color: var(--color-text-light);
+    position: relative;
+    left: -20px;
+}
+
+/* ==================================================
+   3. 主要内容区域 (Main Section)
+   ================================================== */
+#app .status {
+    width: 768px;
+    height: 500px;
+    margin: 40px auto 0;
+    position: relative;
+    background: url(../images/tsinghua/content_shadow.png) no-repeat center 400px;
+}
+
+/* --- 欢迎语区域 --- */
+#app .status .greeting {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 720px;
+    height: 304px;
+    background: var(--color-primary) url(../images/tsinghua/greeting.png) no-repeat 32px 28px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#app .status .greetingtriangle {
+    position: absolute;
+    top: 304px;
+    left: 32px;
+    border-color: #93278F transparent;
+    border-width: 48px 48px 0 0;
+    border-style: solid;
+}
+
+/* --- 通知区域 --- */
+#app .status .notice {
+    position: absolute;
+    top: 128px;
+    left: -16px;
+    width: 320px;
+    height: 172px;
+}
+
+#app .status .notice .triangle {
+    width: 16px;
+    border-color: transparent #763880;
+    border-width: 16px 16px 0 0;
+    border-style: solid;
+}
+
+#app .status .notice .notice-content {
+    position: relative;
+    width: 320px;
+    height: 160px;
+    background: #992995 url(../images/tsinghua/notice.png) no-repeat 14px 10px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- 登录框区域 --- */
+#app .status .loginbox {
+    position: absolute;
+    top: 32px;
+    left: 304px;
+    width: 464px;
+    height: 304px;
+    background: #F2F2F2;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+}
+
+#app .status .loginbox .input-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+#app .status .loginbox .input-label {
+    width: 80px;
+    flex-shrink: 0;
+    line-height: 1.4;
+}
+
+#app .status .loginbox .input-label p {
+    font-size: 21px;
+}
+
+#app .status .loginbox .input-label .english {
+    font-family: var(--font-alt);
+    font-size: 16px;
+    color: var(--color-text-dark);
+}
+
+#app .status .loginbox input {
+    width: 300px;
+    height: 48px;
+    border: 1px solid var(--color-border-input);
+    padding: 2px 8px;
+    background: #FFF;
+    font-family: var(--font-alt);
+    font-size: 34px;
+}
+
+#app .status .loginbox input:hover {
+    border-color: #CCCCCC;
+}
+
+#app .status .loginbox .domain {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-left: 96px;
+}
+
+#app .status .loginbox .input-domain {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    cursor: pointer;
+    display: grid;
+    place-content: center;
+    transition: 120ms background-color ease-in-out;
+}
+
+#app .status .loginbox .input-domain::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em white;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+#app .status .loginbox .input-domain:checked {
+    background: #2563EB;
+    border-color: #2563EB;
+}
+
+#app .status .loginbox .input-domain:checked::before {
+    transform: scale(1);
+}
+
+#app .status .loginbox .label-domain {
+    color: var(--color-text-link);
+    font-weight: 600;
+}
+
+#app .status .loginbox .label-domain p {
+    font-size: 13px;
+}
+
+#app .status .loginbox .label-domain .english {
+    font-size: 11px;
+    font-family: var(--font-alt);
+}
+
+#app .status .loginbox .btn-group {
+    padding-left: 0;
+    margin-top: auto;
+}
+
+#app .status .loginbox .btn-login {
+    width: 100%;
+    height: 46px;
+    border: 1px solid var(--color-accent-border);
+    background: var(--color-accent) url(../images/tsinghua/connect.png) no-repeat center 0;
+    cursor: pointer;
+}
+
+#app .status .loginbox .triangle {
+    position: absolute;
+    bottom: -48px;
+    right: 32px;
+    width: 0;
+    height: 0;
+    border-top: 48px solid var(--color-panel-bg);
+    border-right: 48px solid transparent;
+    border-left: 0;
+}
+
+/* --- 下载区域 --- */
+#app .status .download {
+    position: absolute;
+    bottom: 22px;
+    left: 0;
+    width: 304px;
+    height: 140px;
+    background: url(../images/tsinghua/download.png) no-repeat 0 40px;
+}
+
+#app .status .download .system {
+    position: absolute;
+    bottom: 0;
+    left: -16px;
+    width: 320px;
+    height: 48px;
+    background-color: var(--color-widget-bg);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+#app .status .download .system li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-grow: 1;
+}
+
+#app .status .download .system li::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 32px;
+    height: 32px;
+    margin-bottom: -5px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#app .status .download .system a {
+    color: white;
+    font-size: 13px;
+    font-family: var(--font-alt);
+    text-decoration: none;
+}
+
+#app .status .download .system .windows::before {
+    background-image: url(../images/tsinghua/windows.gif);
+}
+
+#app .status .download .system .mac::before {
+    background-image: url(../images/tsinghua/mac.gif);
+}
+
+#app .status .download .system .linux::before {
+    background-image: url(../images/tsinghua/linux.gif);
+}
+
+#app .status .download .system .android::before {
+    background-image: url(../images/tsinghua/android.gif);
+}
+
+#app .status .download .system .ios::before {
+    background-image: url(../images/tsinghua/ios.gif);
+}
+
+/* --- 页脚小组件 --- */
+#app .status .widget {
+    position: absolute;
+    bottom: 20px;
+    right: 0;
+    width: 464px;
+    height: 32px;
+}
+
+#app .status .widget ul {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    height: 100%;
+}
+
+#app .status .widget li {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #000;
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 45px;
+    margin-right: 20px;
+}
+
+#app .status .widget li a {
+    color: #000;
+    text-decoration: none;
+}
+
+#app .status .widget .english {
+    font-size: 11px;
+    color: var(--color-text-light);
+}
+
+#app .status .widget .bookmark {
+    background-image: url(../images/tsinghua/bookmark.gif);
+}
+
+#app .status .widget .help {
+    background-image: url(../images/tsinghua/help.gif);
+    background-position: 8px center;
+}
+
+#app .status .widget .contact {
+    margin-left: auto;
+    margin-right: 0;
+    background-image: url(../images/tsinghua/contact.gif);
+    background-position: 8px center;
+}
+
+#app .status .widget .contact .detail {
+    margin-left: 8px;
+    line-height: 1.4;
+}
+
+/* --- 页面底部版权信息 --- */
+#app .footer {
+    width: 768px;
+    margin: 0 auto;
+    padding-top: 64px;
+    text-align: right;
+    font-size: 12px;
+    color: var(--color-text-light);
+}
+
+#app .footer .english {
+    font-size: 11px;
+}
+
+/* --- 用户名输入框内的提示信息 --- */
+#app .status .loginbox .instruction {
+    position: absolute;
+    top: 50%;
+    left: 105px;
+    /* 根据当前布局微调左边距 */
+    transform: translateY(-50%);
+    font-size: 13px;
+    color: #999999;
+    padding-left: 40px;
+    text-align: left;
+    background: url(../images/tsinghua/account.gif) no-repeat 0 center;
+    pointer-events: none;
+    /* 允许点击穿透到输入框 */
+}
+
+#app .status .loginbox .instruction p {
+    font-size: 13px;
+    line-height: 1.4;
+}

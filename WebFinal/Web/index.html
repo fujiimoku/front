@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清华大学校园网</title>
+    <link rel="stylesheet" href="static/css/custom.css">
+    <link rel="stylesheet" href="static/css/connected.css">
+    <style>
+        .hidden {
+            display: none !important;
+        }
+    </style>
+    <script src="static/js/main.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- ==================== 登录视图 ==================== -->
+        <div id="login-view">
+            <div class="header">
+                <div class="logo">
+                    <div class="logo-img"></div>
+                </div>
+                <div class="qr">
+                    <div class="qr-img"></div>
+                    <p>欢迎关注“清华大学信息服务”</p>
+                </div>
+            </div>
+
+            <div class="status">
+                <div class="greeting"></div>
+                <div class="greetingtriangle"></div>
+                <div class="notice">
+                    <div class="triangle"></div>
+                    <div class="notice-content"></div>
+                </div>
+                <div class="loginbox">
+                    <!-- 1. 为用户名的 .input-box 添加 position: relative; 以便定位提示信息 -->
+                    <div class="input-box" style="position: relative;">
+                        <div class="input-label">
+                            <p>用户名</p>
+                            <p class="english">User ID</p>
+                        </div>
+                        <!-- 2. 添加提示信息元素 -->
+                        <div class="instruction">
+                            <p>校园网账户</p>
+                            <p>Account of Tsinghua University Network</p>
+                        </div>
+                        <input type="text" placeholder="">
+                    </div>
+                    <div class="input-box">
+                        <div class="input-label">
+                            <p>密码</p>
+                            <p class="english">Password</p>
+                        </div>
+                        <input type="password" placeholder="">
+                    </div>
+                    <div class="domain">
+                        <input type="checkbox" class="input-domain" checked>
+                        <div class="label-domain">
+                            <p>访问校外 (IPv4) 网络</p>
+                            <p class="english">Access to the Internet (IPv4)</p>
+                        </div>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn-login"></button>
+                    </div>
+                    <div class="triangle"></div>
+                </div>
+                <div class="download">
+                    <ul class="system">
+                        <li class="windows"><a href="#">Windows</a></li>
+                        <li class="mac"><a href="#">MacOS</a></li>
+                        <li class="linux"><a href="#">Linux</a></li>
+                        <li class="android"><a href="#">Android</a></li>
+                        <li class="ios"><a href="#">iOS</a></li>
+                    </ul>
+                </div>
+                <div class="widget">
+                    <ul>
+                        <li class="bookmark">
+                            <div><a href="#">收藏</a>
+                                <p class="english">Bookmark This Page</p>
+                            </div>
+                        </li>
+                        <li class="help">
+                            <div><a href="#">帮助</a>
+                                <p class="english">Help</p>
+                            </div>
+                        </li>
+                        <li class="contact">
+                            <div>
+                                <p>联系</p>
+                                <p class="english">Contact</p>
+                            </div>
+                            <div class="detail">
+                                <p>+86-10-62784859</p><a href="mailto:its@tsinghua.edu.cn"
+                                    class="english">its@tsinghua.edu.cn</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <p>清华大学信息化技术中心</p>
+                <p class="english">Information Technology Center, Tsinghua University</p>
+            </footer>
+        </div>
+
+        <!-- ==================== 已连接视图 (默认隐藏) ==================== -->
+        <div id="connected-view" class="hidden">
+            <main class="main">
+                <section class="status-card">
+                    <div class="status-card__greeting"></div>
+                    <div class="status-card__greeting-triangle"></div>
+                    <div class="status-card__panel">
+                        <div class="panel__user-info">
+                            <div class="user-info__name">czf23</div> <!-- 这个内容会被JS动态替换 -->
+                            <div class="user-info__settings">
+                                <a href="#">自服务</a>
+                                <p>Account Settings</p>
+                            </div>
+                        </div>
+                        <div class="panel__info-row">
+                            <div class="info-row__label">
+                                <p>已连接</p>
+                                <p class="sub-label">Duration</p>
+                            </div>
+                            <div class="info-row__value"><span class="online_time">17:12:12</span></div>
+                        </div>
+                        <div class="panel__info-row">
+                            <div class="info-row__label">
+                                <p>已用流量</p>
+                                <p class="sub-label">Usage</p>
+                            </div>
+                            <div class="info-row__value">
+                                <div class="usage-progress">
+                                    <div class="usage-progress__track">
+                                        <div class="usage-progress__segment usage-progress__segment--0-20"></div>
+                                        <div class="usage-progress__segment usage-progress__segment--20-30"></div>
+                                        <div class="usage-progress__segment usage-progress__segment--30-40"></div>
+                                        <div class="usage-progress__segment usage-progress__segment--40-50"></div>
+                                        <div class="usage-progress__tick usage-progress__tick--20">20</div>
+                                        <div class="usage-progress__tick usage-progress__tick--30">30</div>
+                                        <div class="usage-progress__tick usage-progress__tick--40">40</div>
+                                        <div class="usage-progress__tick usage-progress__tick--50">50</div>
+                                        <div class="usage-progress__bar" data-value="15">
+                                            <div class="usage-progress__text">15GB</div>
+                                        </div>
+                                        <div class="usage-progress__overflow">
+                                            <div class="usage-progress__overflow-bar usage-progress__overflow-bar--1">
+                                            </div>
+                                            <div class="usage-progress__overflow-bar usage-progress__overflow-bar--2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="status-card__corner-decoration"></div>
+                    <div class="status-card__logout-box">
+                        <button class="logout-box__button"></button>
+                    </div>
+                    <ul class="status-card__quick-links">
+                        <li class="quick-links__item"><a href="#"
+                                class="quick-links__link quick-links__link--info"><span>Info</span></a></li>
+                        <li class="quick-links__item"><a href="#"
+                                class="quick-links__link quick-links__link--lib"><span>Lib</span></a></li>
+                        <li class="quick-links__item"><a href="#"
+                                class="quick-links__link quick-links__link--learn"><span>Learn</span></a></li>
+                        <li class="quick-links__item"><a href="#"
+                                class="quick-links__link quick-links__link--mail"><span>Mail</span></a></li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
